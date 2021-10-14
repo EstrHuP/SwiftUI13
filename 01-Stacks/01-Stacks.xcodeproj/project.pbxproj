@@ -11,6 +11,7 @@
 		C74BD2F82718D5C800097227 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74BD2F72718D5C800097227 /* ContentView.swift */; };
 		C74BD2FA2718D5C900097227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74BD2F92718D5C900097227 /* Assets.xcassets */; };
 		C74BD2FD2718D5C900097227 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74BD2FC2718D5C900097227 /* Preview Assets.xcassets */; };
+		C74BD3042718D92A00097227 /* Task2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74BD3032718D92A00097227 /* Task2View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C74BD2F72718D5C800097227 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C74BD2F92718D5C900097227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C74BD2FC2718D5C900097227 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C74BD3032718D92A00097227 /* Task2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task2View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				C74BD2F52718D5C800097227 /* _1_StacksApp.swift */,
 				C74BD2F72718D5C800097227 /* ContentView.swift */,
+				C74BD3032718D92A00097227 /* Task2View.swift */,
 				C74BD2F92718D5C900097227 /* Assets.xcassets */,
 				C74BD2FB2718D5C900097227 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74BD3042718D92A00097227 /* Task2View.swift in Sources */,
 				C74BD2F82718D5C800097227 /* ContentView.swift in Sources */,
 				C74BD2F62718D5C800097227 /* _1_StacksApp.swift in Sources */,
 			);
