@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C74BD32C2718DBFC00097227 /* _2_ScrollCardViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74BD32B2718DBFC00097227 /* _2_ScrollCardViewApp.swift */; };
-		C74BD32E2718DBFC00097227 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74BD32D2718DBFC00097227 /* ContentView.swift */; };
-		C74BD3302718DBFE00097227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74BD32F2718DBFE00097227 /* Assets.xcassets */; };
-		C74BD3332718DBFE00097227 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74BD3322718DBFE00097227 /* Preview Assets.xcassets */; };
+		C762FEF1271DD932008E5E83 /* ScrollCardView_02App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762FEF0271DD932008E5E83 /* ScrollCardView_02App.swift */; };
+		C762FEF3271DD932008E5E83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762FEF2271DD932008E5E83 /* ContentView.swift */; };
+		C762FEF5271DD935008E5E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C762FEF4271DD935008E5E83 /* Assets.xcassets */; };
+		C762FEF8271DD935008E5E83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C762FEF7271DD935008E5E83 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C74BD3282718DBFC00097227 /* 02-ScrollCardView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "02-ScrollCardView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C74BD32B2718DBFC00097227 /* _2_ScrollCardViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _2_ScrollCardViewApp.swift; sourceTree = "<group>"; };
-		C74BD32D2718DBFC00097227 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C74BD32F2718DBFE00097227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C74BD3322718DBFE00097227 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C762FEED271DD932008E5E83 /* ScrollCardView-02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScrollCardView-02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C762FEF0271DD932008E5E83 /* ScrollCardView_02App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollCardView_02App.swift; sourceTree = "<group>"; };
+		C762FEF2271DD932008E5E83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C762FEF4271DD935008E5E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C762FEF7271DD935008E5E83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C74BD3252718DBFC00097227 /* Frameworks */ = {
+		C762FEEA271DD932008E5E83 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,37 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C74BD31F2718DBFC00097227 = {
+		C762FEE4271DD932008E5E83 = {
 			isa = PBXGroup;
 			children = (
-				C74BD32A2718DBFC00097227 /* 02-ScrollCardView */,
-				C74BD3292718DBFC00097227 /* Products */,
+				C762FEEF271DD932008E5E83 /* ScrollCardView-02 */,
+				C762FEEE271DD932008E5E83 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C74BD3292718DBFC00097227 /* Products */ = {
+		C762FEEE271DD932008E5E83 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C74BD3282718DBFC00097227 /* 02-ScrollCardView.app */,
+				C762FEED271DD932008E5E83 /* ScrollCardView-02.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C74BD32A2718DBFC00097227 /* 02-ScrollCardView */ = {
+		C762FEEF271DD932008E5E83 /* ScrollCardView-02 */ = {
 			isa = PBXGroup;
 			children = (
-				C74BD32B2718DBFC00097227 /* _2_ScrollCardViewApp.swift */,
-				C74BD32D2718DBFC00097227 /* ContentView.swift */,
-				C74BD32F2718DBFE00097227 /* Assets.xcassets */,
-				C74BD3312718DBFE00097227 /* Preview Content */,
+				C762FEF0271DD932008E5E83 /* ScrollCardView_02App.swift */,
+				C762FEF2271DD932008E5E83 /* ContentView.swift */,
+				C762FEF4271DD935008E5E83 /* Assets.xcassets */,
+				C762FEF6271DD935008E5E83 /* Preview Content */,
 			);
-			path = "02-ScrollCardView";
+			path = "ScrollCardView-02";
 			sourceTree = "<group>";
 		};
-		C74BD3312718DBFE00097227 /* Preview Content */ = {
+		C762FEF6271DD935008E5E83 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				C74BD3322718DBFE00097227 /* Preview Assets.xcassets */,
+				C762FEF7271DD935008E5E83 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -70,39 +70,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C74BD3272718DBFC00097227 /* 02-ScrollCardView */ = {
+		C762FEEC271DD932008E5E83 /* ScrollCardView-02 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C74BD3362718DBFE00097227 /* Build configuration list for PBXNativeTarget "02-ScrollCardView" */;
+			buildConfigurationList = C762FEFB271DD935008E5E83 /* Build configuration list for PBXNativeTarget "ScrollCardView-02" */;
 			buildPhases = (
-				C74BD3242718DBFC00097227 /* Sources */,
-				C74BD3252718DBFC00097227 /* Frameworks */,
-				C74BD3262718DBFC00097227 /* Resources */,
+				C762FEE9271DD932008E5E83 /* Sources */,
+				C762FEEA271DD932008E5E83 /* Frameworks */,
+				C762FEEB271DD932008E5E83 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "02-ScrollCardView";
-			productName = "02-ScrollCardView";
-			productReference = C74BD3282718DBFC00097227 /* 02-ScrollCardView.app */;
+			name = "ScrollCardView-02";
+			productName = "ScrollCardView-02";
+			productReference = C762FEED271DD932008E5E83 /* ScrollCardView-02.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C74BD3202718DBFC00097227 /* Project object */ = {
+		C762FEE5271DD932008E5E83 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					C74BD3272718DBFC00097227 = {
+					C762FEEC271DD932008E5E83 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = C74BD3232718DBFC00097227 /* Build configuration list for PBXProject "02-ScrollCardView" */;
+			buildConfigurationList = C762FEE8271DD932008E5E83 /* Build configuration list for PBXProject "ScrollCardView-02" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = C74BD31F2718DBFC00097227;
-			productRefGroup = C74BD3292718DBFC00097227 /* Products */;
+			mainGroup = C762FEE4271DD932008E5E83;
+			productRefGroup = C762FEEE271DD932008E5E83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C74BD3272718DBFC00097227 /* 02-ScrollCardView */,
+				C762FEEC271DD932008E5E83 /* ScrollCardView-02 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C74BD3262718DBFC00097227 /* Resources */ = {
+		C762FEEB271DD932008E5E83 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C74BD3332718DBFE00097227 /* Preview Assets.xcassets in Resources */,
-				C74BD3302718DBFE00097227 /* Assets.xcassets in Resources */,
+				C762FEF8271DD935008E5E83 /* Preview Assets.xcassets in Resources */,
+				C762FEF5271DD935008E5E83 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C74BD3242718DBFC00097227 /* Sources */ = {
+		C762FEE9271DD932008E5E83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C74BD32E2718DBFC00097227 /* ContentView.swift in Sources */,
-				C74BD32C2718DBFC00097227 /* _2_ScrollCardViewApp.swift in Sources */,
+				C762FEF3271DD932008E5E83 /* ContentView.swift in Sources */,
+				C762FEF1271DD932008E5E83 /* ScrollCardView_02App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C74BD3342718DBFE00097227 /* Debug */ = {
+		C762FEF9271DD935008E5E83 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -206,7 +206,7 @@
 			};
 			name = Debug;
 		};
-		C74BD3352718DBFE00097227 /* Release */ = {
+		C762FEFA271DD935008E5E83 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -261,14 +261,14 @@
 			};
 			name = Release;
 		};
-		C74BD3372718DBFE00097227 /* Debug */ = {
+		C762FEFC271DD935008E5E83 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"02-ScrollCardView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ScrollCardView-02/Preview Content\"";
 				DEVELOPMENT_TEAM = 998HSZS578;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -283,7 +283,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.-2-ScrollCardView";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.ScrollCardView-02";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -291,14 +291,14 @@
 			};
 			name = Debug;
 		};
-		C74BD3382718DBFE00097227 /* Release */ = {
+		C762FEFD271DD935008E5E83 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"02-ScrollCardView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ScrollCardView-02/Preview Content\"";
 				DEVELOPMENT_TEAM = 998HSZS578;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -313,7 +313,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.-2-ScrollCardView";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.ScrollCardView-02";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -324,25 +324,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C74BD3232718DBFC00097227 /* Build configuration list for PBXProject "02-ScrollCardView" */ = {
+		C762FEE8271DD932008E5E83 /* Build configuration list for PBXProject "ScrollCardView-02" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C74BD3342718DBFE00097227 /* Debug */,
-				C74BD3352718DBFE00097227 /* Release */,
+				C762FEF9271DD935008E5E83 /* Debug */,
+				C762FEFA271DD935008E5E83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C74BD3362718DBFE00097227 /* Build configuration list for PBXNativeTarget "02-ScrollCardView" */ = {
+		C762FEFB271DD935008E5E83 /* Build configuration list for PBXNativeTarget "ScrollCardView-02" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C74BD3372718DBFE00097227 /* Debug */,
-				C74BD3382718DBFE00097227 /* Release */,
+				C762FEFC271DD935008E5E83 /* Debug */,
+				C762FEFD271DD935008E5E83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C74BD3202718DBFC00097227 /* Project object */;
+	rootObject = C762FEE5271DD932008E5E83 /* Project object */;
 }

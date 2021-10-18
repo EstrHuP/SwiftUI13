@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  02-ScrollCardView
+//  ScrollCardView-02
 //
-//  Created by Esther Huecas on 14/10/21.
+//  Created by Esther Huecas on 18/10/21.
 //
 
 import SwiftUI
