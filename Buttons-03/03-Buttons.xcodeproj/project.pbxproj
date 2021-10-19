@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C762FF09271F1E5C008E5E83 /* Buttons-03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buttons-03.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C762FF09271F1E5C008E5E83 /* 03-Buttons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "03-Buttons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C762FF0C271F1E5C008E5E83 /* Buttons_03App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons_03App.swift; sourceTree = "<group>"; };
 		C762FF0E271F1E5C008E5E83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C762FF10271F1E5E008E5E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		C762FF0A271F1E5C008E5E83 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C762FF09271F1E5C008E5E83 /* Buttons-03.app */,
+				C762FF09271F1E5C008E5E83 /* 03-Buttons.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C762FF08271F1E5C008E5E83 /* Buttons-03 */ = {
+		C762FF08271F1E5C008E5E83 /* 03-Buttons */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C762FF17271F1E5E008E5E83 /* Build configuration list for PBXNativeTarget "Buttons-03" */;
+			buildConfigurationList = C762FF17271F1E5E008E5E83 /* Build configuration list for PBXNativeTarget "03-Buttons" */;
 			buildPhases = (
 				C762FF05271F1E5C008E5E83 /* Sources */,
 				C762FF06271F1E5C008E5E83 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "Buttons-03";
+			name = "03-Buttons";
 			productName = "Buttons-03";
-			productReference = C762FF09271F1E5C008E5E83 /* Buttons-03.app */;
+			productReference = C762FF09271F1E5C008E5E83 /* 03-Buttons.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C762FF04271F1E5C008E5E83 /* Build configuration list for PBXProject "Buttons-03" */;
+			buildConfigurationList = C762FF04271F1E5C008E5E83 /* Build configuration list for PBXProject "03-Buttons" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C762FF08271F1E5C008E5E83 /* Buttons-03 */,
+				C762FF08271F1E5C008E5E83 /* 03-Buttons */,
 			);
 		};
 /* End PBXProject section */
@@ -284,7 +284,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.Buttons-03";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "03-Buttons";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -314,7 +314,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.Buttons-03";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "03-Buttons";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -324,7 +324,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C762FF04271F1E5C008E5E83 /* Build configuration list for PBXProject "Buttons-03" */ = {
+		C762FF04271F1E5C008E5E83 /* Build configuration list for PBXProject "03-Buttons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C762FF15271F1E5E008E5E83 /* Debug */,
@@ -333,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C762FF17271F1E5E008E5E83 /* Build configuration list for PBXNativeTarget "Buttons-03" */ = {
+		C762FF17271F1E5E008E5E83 /* Build configuration list for PBXNativeTarget "03-Buttons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C762FF18271F1E5E008E5E83 /* Debug */,
