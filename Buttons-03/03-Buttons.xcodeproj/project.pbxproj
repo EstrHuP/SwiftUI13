@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C762FF0D271F1E5C008E5E83 /* Buttons_03App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762FF0C271F1E5C008E5E83 /* Buttons_03App.swift */; };
+		C762FF0D271F1E5C008E5E83 /* 03_ButtonsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762FF0C271F1E5C008E5E83 /* 03_ButtonsApp.swift */; };
 		C762FF0F271F1E5C008E5E83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762FF0E271F1E5C008E5E83 /* ContentView.swift */; };
 		C762FF11271F1E5E008E5E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C762FF10271F1E5E008E5E83 /* Assets.xcassets */; };
 		C762FF14271F1E5E008E5E83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C762FF13271F1E5E008E5E83 /* Preview Assets.xcassets */; };
@@ -15,7 +15,7 @@
 
 /* Begin PBXFileReference section */
 		C762FF09271F1E5C008E5E83 /* 03-Buttons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "03-Buttons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C762FF0C271F1E5C008E5E83 /* Buttons_03App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons_03App.swift; sourceTree = "<group>"; };
+		C762FF0C271F1E5C008E5E83 /* 03_ButtonsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03_ButtonsApp.swift; sourceTree = "<group>"; };
 		C762FF0E271F1E5C008E5E83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C762FF10271F1E5E008E5E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C762FF13271F1E5E008E5E83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		C762FF00271F1E5C008E5E83 = {
 			isa = PBXGroup;
 			children = (
-				C762FF0B271F1E5C008E5E83 /* Buttons-03 */,
+				C762FF0B271F1E5C008E5E83 /* 03-Buttons */,
 				C762FF0A271F1E5C008E5E83 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,15 +48,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C762FF0B271F1E5C008E5E83 /* Buttons-03 */ = {
+		C762FF0B271F1E5C008E5E83 /* 03-Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				C762FF0C271F1E5C008E5E83 /* Buttons_03App.swift */,
+				C762FF0C271F1E5C008E5E83 /* 03_ButtonsApp.swift */,
 				C762FF0E271F1E5C008E5E83 /* ContentView.swift */,
 				C762FF10271F1E5E008E5E83 /* Assets.xcassets */,
 				C762FF12271F1E5E008E5E83 /* Preview Content */,
 			);
-			path = "Buttons-03";
+			path = "03-Buttons";
 			sourceTree = "<group>";
 		};
 		C762FF12271F1E5E008E5E83 /* Preview Content */ = {
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C762FF0F271F1E5C008E5E83 /* ContentView.swift in Sources */,
-				C762FF0D271F1E5C008E5E83 /* Buttons_03App.swift in Sources */,
+				C762FF0D271F1E5C008E5E83 /* 03_ButtonsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
