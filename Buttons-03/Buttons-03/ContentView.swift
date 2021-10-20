@@ -27,6 +27,7 @@ struct ContentView: View {
                     RoundedRectangle(cornerRadius: 50)
                         .stroke(Color.black, lineWidth: 5)
                     )
+                    .padding()
             }
             
             Button(action: {
@@ -37,6 +38,7 @@ struct ContentView: View {
                     Text("Delete")
                         .fontWeight(.bold)
                 }
+                .frame(minWidth: 0, maxWidth: .infinity)
                 .padding()
                 /// UIGradients --> web for gradients
                 .background(LinearGradient(gradient: Gradient(colors: [Color("Dark Ocean 1"), Color("Dark Ocean 2")]), startPoint: .leading, endPoint: .trailing))
@@ -46,6 +48,7 @@ struct ContentView: View {
                 .cornerRadius(40)
 //                .shadow(radius: 10.0) //Sombreado
                 .shadow(color: .blue, radius: 10.0, x: 20, y: 5)
+                .padding(.horizontal, 15)
             }
         }
     }
