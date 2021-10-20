@@ -16,33 +16,7 @@ struct ContentView: View {
                 print("Button with icon pressed")
             }) {
                 HStack {
-                    Image(systemName: "square.and.pencil")
-                    Text("Edit")
-                        .fontWeight(.bold)
-                }
-            }
-            .buttonStyle(BasicButtonStyle())
-            
-            //Edit
-            Button(action: {
-                print("Button with icon pressed")
-            }) {
-                HStack {
-                    Image(systemName: "trash")
-                    Text("Delete")
-                        .fontWeight(.bold)
-                }
-            }
-            .buttonStyle(BasicButtonStyle())
-            
-            //Upload
-            Button(action: {
-                print("Button with icon pressed")
-            }) {
-                HStack {
-                    Image(systemName: "square.and.arrow.up")
-                    Text("Share")
-                        .fontWeight(.bold)
+                    Image(systemName: "arrow.right")
                 }
             }
             .buttonStyle(BasicButtonStyle())
@@ -68,10 +42,9 @@ struct BasicButtonStyle: ButtonStyle {
             .background(LinearGradient(gradient: Gradient(colors: [Color("Dark Ocean 1"), Color("Dark Ocean 2")]), startPoint: .leading, endPoint: .trailing))
             .font(.largeTitle)
             .foregroundColor(.white)
-            .cornerRadius(40)
-//                .shadow(radius: 10.0) //Sombreado
-            .shadow(color: .blue, radius: 10.0, x: 20, y: 5)
-            .padding([.horizontal, .vertical])
-            .scaleEffect(configuration.isPressed ? 0.8 : 1.0) //Animations
+//            .cornerRadius(40)
+            .clipShape(Circle())
+            .padding()
+            .rotationEffect(configuration.isPressed ? Angle(degrees: 90.0) : Angle()) //rotation effect
     }
 }
