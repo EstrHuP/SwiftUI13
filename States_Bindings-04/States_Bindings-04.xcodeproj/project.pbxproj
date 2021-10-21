@@ -12,6 +12,7 @@
 		C74423CF27215C0800EB1F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74423CE27215C0800EB1F69 /* Assets.xcassets */; };
 		C74423D227215C0800EB1F69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74423D127215C0800EB1F69 /* Preview Assets.xcassets */; };
 		C74423D927215F5A00EB1F69 /* Exercise_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74423D827215F5A00EB1F69 /* Exercise_1.swift */; };
+		C74423DB2721929200EB1F69 /* Exercise_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74423DA2721929200EB1F69 /* Exercise_2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		C74423CE27215C0800EB1F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C74423D127215C0800EB1F69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C74423D827215F5A00EB1F69 /* Exercise_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise_1.swift; sourceTree = "<group>"; };
+		C74423DA2721929200EB1F69 /* Exercise_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise_2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				C74423CA27215C0200EB1F69 /* States_Bindings_04App.swift */,
 				C74423CC27215C0200EB1F69 /* ContentView.swift */,
 				C74423D827215F5A00EB1F69 /* Exercise_1.swift */,
+				C74423DA2721929200EB1F69 /* Exercise_2.swift */,
 				C74423CE27215C0800EB1F69 /* Assets.xcassets */,
 				C74423D027215C0800EB1F69 /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74423DB2721929200EB1F69 /* Exercise_2.swift in Sources */,
 				C74423D927215F5A00EB1F69 /* Exercise_1.swift in Sources */,
 				C74423CD27215C0200EB1F69 /* ContentView.swift in Sources */,
 				C74423CB27215C0200EB1F69 /* States_Bindings_04App.swift in Sources */,
