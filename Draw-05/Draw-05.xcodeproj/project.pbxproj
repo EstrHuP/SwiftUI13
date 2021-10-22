@@ -14,6 +14,7 @@
 		C74423F72722B97E00EB1F69 /* CurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74423F62722B97E00EB1F69 /* CurveView.swift */; };
 		C74423F92722BFD700EB1F69 /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74423F82722BFD700EB1F69 /* PieView.swift */; };
 		C74423FB2722DFFD00EB1F69 /* ProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74423FA2722DFFD00EB1F69 /* ProgressIndicatorView.swift */; };
+		C74423FE2722E53A00EB1F69 /* DonutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74423FD2722E53A00EB1F69 /* DonutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C74423F62722B97E00EB1F69 /* CurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveView.swift; sourceTree = "<group>"; };
 		C74423F82722BFD700EB1F69 /* PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
 		C74423FA2722DFFD00EB1F69 /* ProgressIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorView.swift; sourceTree = "<group>"; };
+		C74423FD2722E53A00EB1F69 /* DonutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				C74423F62722B97E00EB1F69 /* CurveView.swift */,
 				C74423F82722BFD700EB1F69 /* PieView.swift */,
 				C74423FA2722DFFD00EB1F69 /* ProgressIndicatorView.swift */,
+				C74423FD2722E53A00EB1F69 /* DonutView.swift */,
 				C74423EC2722A34F00EB1F69 /* Assets.xcassets */,
 				C74423EE2722A34F00EB1F69 /* Preview Content */,
 			);
@@ -151,6 +154,7 @@
 				C74423F92722BFD700EB1F69 /* PieView.swift in Sources */,
 				C74423EB2722A34700EB1F69 /* ContentView.swift in Sources */,
 				C74423E92722A34700EB1F69 /* Draw_05App.swift in Sources */,
+				C74423FE2722E53A00EB1F69 /* DonutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
