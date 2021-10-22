@@ -12,6 +12,7 @@
 		C74423ED2722A34F00EB1F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74423EC2722A34F00EB1F69 /* Assets.xcassets */; };
 		C74423F02722A34F00EB1F69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74423EF2722A34F00EB1F69 /* Preview Assets.xcassets */; };
 		C74423F72722B97E00EB1F69 /* CurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74423F62722B97E00EB1F69 /* CurveView.swift */; };
+		C74423F92722BFD700EB1F69 /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74423F82722BFD700EB1F69 /* PieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		C74423EC2722A34F00EB1F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C74423EF2722A34F00EB1F69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C74423F62722B97E00EB1F69 /* CurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveView.swift; sourceTree = "<group>"; };
+		C74423F82722BFD700EB1F69 /* PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				C74423E82722A34700EB1F69 /* Draw_05App.swift */,
 				C74423EA2722A34700EB1F69 /* ContentView.swift */,
 				C74423F62722B97E00EB1F69 /* CurveView.swift */,
+				C74423F82722BFD700EB1F69 /* PieView.swift */,
 				C74423EC2722A34F00EB1F69 /* Assets.xcassets */,
 				C74423EE2722A34F00EB1F69 /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C74423F72722B97E00EB1F69 /* CurveView.swift in Sources */,
+				C74423F92722BFD700EB1F69 /* PieView.swift in Sources */,
 				C74423EB2722A34700EB1F69 /* ContentView.swift in Sources */,
 				C74423E92722A34700EB1F69 /* Draw_05App.swift in Sources */,
 			);
