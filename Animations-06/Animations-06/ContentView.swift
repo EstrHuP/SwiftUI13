@@ -26,11 +26,13 @@ struct ContentView: View {
                 .foregroundColor(isIconChanged ? .green : .white)
                 .scaleEffect(isIconChanged ? 1.0 : 0.5)
         }
-        .animation(.spring(response: 0.5, dampingFraction: 0.1, blendDuration: 0.5))
+//        .animation(.spring(response: 0.5, dampingFraction: 0.1, blendDuration: 0.5))
 //        .animation(.default)
         .onTapGesture {
-            self.isButtonColorChanged.toggle()
-            self.isIconChanged.toggle()
+            withAnimation(.default) {
+                self.isButtonColorChanged.toggle()
+                self.isIconChanged.toggle()
+            }
             self.isIconSizeChanged.toggle()
         }
     }
