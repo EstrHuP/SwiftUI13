@@ -13,6 +13,7 @@
 		C73F457127286AE800CA2D47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73F457027286AE800CA2D47 /* Preview Assets.xcassets */; };
 		C74B64A62729B6D700424C8E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B64A52729B6D700424C8E /* LoadingView.swift */; };
 		C74B64A82729B9BC00424C8E /* LoadingBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B64A72729B9BC00424C8E /* LoadingBarView.swift */; };
+		C74B64AA2729C83600424C8E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B64A92729C83600424C8E /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C73F457027286AE800CA2D47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C74B64A52729B6D700424C8E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C74B64A72729B9BC00424C8E /* LoadingBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingBarView.swift; sourceTree = "<group>"; };
+		C74B64A92729C83600424C8E /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				C73F456B27286AE600CA2D47 /* ContentView.swift */,
 				C74B64A52729B6D700424C8E /* LoadingView.swift */,
 				C74B64A72729B9BC00424C8E /* LoadingBarView.swift */,
+				C74B64A92729C83600424C8E /* ProgressView.swift */,
 				C73F456D27286AE800CA2D47 /* Assets.xcassets */,
 				C73F456F27286AE800CA2D47 /* Preview Content */,
 			);
@@ -145,6 +148,7 @@
 			files = (
 				C73F456C27286AE600CA2D47 /* ContentView.swift in Sources */,
 				C74B64A82729B9BC00424C8E /* LoadingBarView.swift in Sources */,
+				C74B64AA2729C83600424C8E /* ProgressView.swift in Sources */,
 				C73F456A27286AE600CA2D47 /* Animations_06App.swift in Sources */,
 				C74B64A62729B6D700424C8E /* LoadingView.swift in Sources */,
 			);
