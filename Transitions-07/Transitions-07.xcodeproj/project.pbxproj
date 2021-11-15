@@ -11,6 +11,7 @@
 		C753B4A9273BB56500295EBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753B4A8273BB56500295EBA /* ContentView.swift */; };
 		C753B4AB273BB56600295EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C753B4AA273BB56600295EBA /* Assets.xcassets */; };
 		C753B4AE273BB56600295EBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C753B4AD273BB56600295EBA /* Preview Assets.xcassets */; };
+		C753B4B5273BC84400295EBA /* Task06View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753B4B4273BC84400295EBA /* Task06View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C753B4A8273BB56500295EBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C753B4AA273BB56600295EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C753B4AD273BB56600295EBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C753B4B4273BC84400295EBA /* Task06View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task06View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				C753B4A6273BB56500295EBA /* Transitions_07App.swift */,
 				C753B4A8273BB56500295EBA /* ContentView.swift */,
+				C753B4B4273BC84400295EBA /* Task06View.swift */,
 				C753B4AA273BB56600295EBA /* Assets.xcassets */,
 				C753B4AC273BB56600295EBA /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C753B4B5273BC84400295EBA /* Task06View.swift in Sources */,
 				C753B4A9273BB56500295EBA /* ContentView.swift in Sources */,
 				C753B4A7273BB56500295EBA /* Transitions_07App.swift in Sources */,
 			);
