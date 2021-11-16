@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct Task06_1View: View {
+    
+    @State private var isBasicSelected = false
+    @State private var isDegreeSelected = false
+    @State private var isDefinitySelected = false
+    
+    @State private var isDegreeDetailShowed = false
+    @State private var isDefinityDetailShowed = false
+    
+    @State private var tinyZIndex = 1
+    @State private var largeZIndex = -1
+    
     var body: some View {
         VStack {
             
@@ -16,19 +27,80 @@ struct Task06_1View: View {
             HStack(spacing: 8) {
                 
                 PricingView(title: "Básico", price: "9.99€", subtitle: "Un curso incluido", textColor: .white, backgroundColor: .green)
+                    .scaleEffect(self.isBasicSelected ? 1.5 : 1.0)
+                    .offset(x: self.isBasicSelected ? 100 : 0, y: self.isBasicSelected ? 120 : 0)
+                    .zIndex(Double(self.tinyZIndex))
+                    .onTapGesture {
+                        if !self.isDegreeSelected && !self.isDefinitySelected {
+                            withAnimation(.easeInOut) {
+                                self.isBasicSelected.toggle()
+                            }
+                        }
+                        if !self.isBasicSelected {
+                            Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
+                                self.largeZIndex = 1
+                            }
+                        } else {
+                            self.largeZIndex = 100
+                        }
+                    }
                 
                 ZStack {
                     PricingView(title: "Carrera", price: "29.99€", subtitle: "Toda una carrera", textColor: .black, backgroundColor: Color(red: 230/255, green: 230/255, blue:230/255))
                     
-                    DetailView(title: "El mejor para empezar", isSecondSection: true)
+                    if self.isDegreeDetailShowed {
+                        DetailView(title: "El mejor para empezar", isSecondSection: true)
+                    }
                 }
+                
+                .scaleEffect(self.isDegreeSelected ? 1.5 : 1.0)
+                .offset(x: self.isDegreeSelected ? -90 : 0, y: self.isDegreeSelected ? 120 : 0)
+                .zIndex(Double(self.tinyZIndex))
+                .onTapGesture {
+                    if !self.isBasicSelected && !self.isDefinitySelected {
+                        withAnimation(.easeInOut) {
+                            self.isDegreeSelected.toggle()
+                            self.isDegreeDetailShowed.toggle()
+                        }
+                    }
+                    if !self.isDegreeSelected {
+                        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
+                            self.largeZIndex = 1
+                        }
+                    } else {
+                        self.largeZIndex = 100
+                    }
+                }
+                
             } .padding()
             
             ZStack {
                 PricingView(title: "Definitivo", price: "99.99€", subtitle: "Todos los cursos onlinne", textColor: .white, backgroundColor: Color(red: 100/255, green: 100/255, blue: 100/255), icon: "lightbulb").padding(.horizontal)
                 
-                DetailView(title: "Conviértete en el master del universo", isSecondSection: false)
+                if self.isDefinityDetailShowed {
+                    DetailView(title: "Conviértete en el master del universo", isSecondSection: false)
+                }
             }
+            
+            .scaleEffect(self.isDefinitySelected ? 1.5 : 1.0)
+            .offset(x: 0, y: self.isDefinitySelected ? -120 : 0)
+            .zIndex(Double(self.largeZIndex))
+            .onTapGesture {
+                if !self.isBasicSelected && !self.isDegreeSelected {
+                    withAnimation(.easeInOut) {
+                        self.isDefinitySelected.toggle()
+                        self.isDefinityDetailShowed.toggle()
+                    }
+                }
+                if !self.isDefinitySelected {
+                    Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
+                        self.largeZIndex = 1
+                    }
+                } else {
+                    self.largeZIndex = 100
+                }
+            }
+            
             .padding(.vertical)
             Spacer()
         }
