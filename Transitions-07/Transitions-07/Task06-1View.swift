@@ -26,10 +26,12 @@ struct Task06_1View: View {
             
             HStack(spacing: 8) {
                 
-                PricingView(title: "Básico", price: "9.99€", subtitle: "Un curso incluido", textColor: .white, backgroundColor: .green)
+                CardView(title: "Básico", price: "9.99€", subtitle: "Un curso incluido", textColor: .white, backgroundColor: .green)
+                
                     .scaleEffect(self.isBasicSelected ? 1.5 : 1.0)
                     .offset(x: self.isBasicSelected ? 100 : 0, y: self.isBasicSelected ? 120 : 0)
                     .zIndex(Double(self.tinyZIndex))
+                
                     .onTapGesture {
                         if !self.isDegreeSelected && !self.isDefinitySelected {
                             withAnimation(.easeInOut) {
@@ -46,7 +48,7 @@ struct Task06_1View: View {
                     }
                 
                 ZStack {
-                    PricingView(title: "Carrera", price: "29.99€", subtitle: "Toda una carrera", textColor: .black, backgroundColor: Color(red: 230/255, green: 230/255, blue:230/255))
+                    CardView(title: "Carrera", price: "29.99€", subtitle: "Toda una carrera", textColor: .black, backgroundColor: Color(red: 230/255, green: 230/255, blue:230/255))
                     
                     if self.isDegreeDetailShowed {
                         DetailView(title: "El mejor para empezar", isSecondSection: true)
@@ -56,6 +58,7 @@ struct Task06_1View: View {
                 .scaleEffect(self.isDegreeSelected ? 1.5 : 1.0)
                 .offset(x: self.isDegreeSelected ? -90 : 0, y: self.isDegreeSelected ? 120 : 0)
                 .zIndex(Double(self.tinyZIndex))
+                
                 .onTapGesture {
                     if !self.isBasicSelected && !self.isDefinitySelected {
                         withAnimation(.easeInOut) {
@@ -71,20 +74,19 @@ struct Task06_1View: View {
                         self.largeZIndex = 100
                     }
                 }
-                
             } .padding()
             
             ZStack {
-                PricingView(title: "Definitivo", price: "99.99€", subtitle: "Todos los cursos onlinne", textColor: .white, backgroundColor: Color(red: 100/255, green: 100/255, blue: 100/255), icon: "lightbulb").padding(.horizontal)
+                CardView(title: "Definitivo", price: "99.99€", subtitle: "Todos los cursos onlinne", textColor: .white, backgroundColor: Color(red: 100/255, green: 100/255, blue: 100/255), icon: "lightbulb").padding(.horizontal)
                 
                 if self.isDefinityDetailShowed {
                     DetailView(title: "Conviértete en el master del universo", isSecondSection: false)
                 }
             }
-            
-            .scaleEffect(self.isDefinitySelected ? 1.5 : 1.0)
+            .scaleEffect(self.isDefinitySelected ? 1.05 : 1.0)
             .offset(x: 0, y: self.isDefinitySelected ? -120 : 0)
             .zIndex(Double(self.largeZIndex))
+            
             .onTapGesture {
                 if !self.isBasicSelected && !self.isDegreeSelected {
                     withAnimation(.easeInOut) {
@@ -100,7 +102,6 @@ struct Task06_1View: View {
                     self.largeZIndex = 100
                 }
             }
-            
             .padding(.vertical)
             Spacer()
         }
@@ -127,45 +128,6 @@ struct HeaderView: View {
             Spacer()
         }
         .padding()
-    }
-}
-
-struct PricingView: View {
-    
-    var title: String
-    var price: String?
-    var subtitle: String?
-    var textColor: Color
-    var backgroundColor: Color
-    var icon: String?
-    
-    var body: some View {
-        VStack {
-            
-            icon.map({
-                Image(systemName:$0)
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-            })
-            
-            Text(title)
-                .font(.system(.title, design:.rounded))
-                .fontWeight(.bold)
-                .foregroundColor(textColor)
-            
-            Text(price ?? "")
-                .font(.system(size: 30, weight:.heavy, design:.rounded))
-                .foregroundColor(textColor)
-            
-            Text(subtitle ?? "")
-                .font(.headline)
-                .foregroundColor(textColor)
-            
-        }
-        .frame(minWidth:0, maxWidth: .infinity, minHeight: 100)
-            .padding(30)
-            .background(backgroundColor)
-            .cornerRadius(10)
     }
 }
 
