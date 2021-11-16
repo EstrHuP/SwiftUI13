@@ -112,7 +112,7 @@ struct SuccessPaymentView: View {
     @State private var progress: CGFloat = 0.0
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             
             Text("Pago realizado con éxito")
                 .font(.system(.largeTitle, design: .rounded).bold())
@@ -145,8 +145,8 @@ struct SuccessPaymentView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(.gray)
                     .frame(width: 400, height: 70)
-                    .transition(.offsetScaledOpacityOut)
-                
+                    .transition(.move(edge: .bottom))
+                    .animation(.easeInOut)
                     .overlay(
                         HStack {
                             Image(systemName: "hand.tap.fill")
