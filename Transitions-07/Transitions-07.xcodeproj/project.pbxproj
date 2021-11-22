@@ -14,6 +14,8 @@
 		C753B4B5273BC84400295EBA /* Task06View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753B4B4273BC84400295EBA /* Task06View.swift */; };
 		C754189F2743F84B00B0683F /* Task06-1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C754189E2743F84B00B0683F /* Task06-1View.swift */; };
 		C75418A12744465800B0683F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75418A02744465800B0683F /* CardView.swift */; };
+		C75418A327445A8F00B0683F /* Task06-2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75418A227445A8F00B0683F /* Task06-2View.swift */; };
+		C75418A527445B3E00B0683F /* CardViewCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75418A427445B3E00B0683F /* CardViewCourses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		C753B4B4273BC84400295EBA /* Task06View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task06View.swift; sourceTree = "<group>"; };
 		C754189E2743F84B00B0683F /* Task06-1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task06-1View.swift"; sourceTree = "<group>"; };
 		C75418A02744465800B0683F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C75418A227445A8F00B0683F /* Task06-2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task06-2View.swift"; sourceTree = "<group>"; };
+		C75418A427445B3E00B0683F /* CardViewCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCourses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +61,8 @@
 		C753B4A5273BB56500295EBA /* Transitions-07 */ = {
 			isa = PBXGroup;
 			children = (
-				C753B4A6273BB56500295EBA /* Transitions_07App.swift */,
-				C753B4A8273BB56500295EBA /* ContentView.swift */,
-				C753B4B4273BC84400295EBA /* Task06View.swift */,
-				C754189E2743F84B00B0683F /* Task06-1View.swift */,
-				C75418A02744465800B0683F /* CardView.swift */,
+				C75418A627445B4500B0683F /* CourseSection */,
+				C75418A727445B6800B0683F /* Exercises */,
 				C753B4AA273BB56600295EBA /* Assets.xcassets */,
 				C753B4AC273BB56600295EBA /* Preview Content */,
 			);
@@ -74,6 +75,51 @@
 				C753B4AD273BB56600295EBA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C75418A627445B4500B0683F /* CourseSection */ = {
+			isa = PBXGroup;
+			children = (
+				C753B4A6273BB56500295EBA /* Transitions_07App.swift */,
+				C753B4A8273BB56500295EBA /* ContentView.swift */,
+			);
+			path = CourseSection;
+			sourceTree = "<group>";
+		};
+		C75418A727445B6800B0683F /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				C75418AA27445B8F00B0683F /* Exercise2.1 */,
+				C75418A927445B8200B0683F /* Exercise2 */,
+				C75418A827445B7A00B0683F /* Exercise1 */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
+		C75418A827445B7A00B0683F /* Exercise1 */ = {
+			isa = PBXGroup;
+			children = (
+				C753B4B4273BC84400295EBA /* Task06View.swift */,
+			);
+			path = Exercise1;
+			sourceTree = "<group>";
+		};
+		C75418A927445B8200B0683F /* Exercise2 */ = {
+			isa = PBXGroup;
+			children = (
+				C75418A02744465800B0683F /* CardView.swift */,
+				C754189E2743F84B00B0683F /* Task06-1View.swift */,
+			);
+			path = Exercise2;
+			sourceTree = "<group>";
+		};
+		C75418AA27445B8F00B0683F /* Exercise2.1 */ = {
+			isa = PBXGroup;
+			children = (
+				C75418A427445B3E00B0683F /* CardViewCourses.swift */,
+				C75418A227445A8F00B0683F /* Task06-2View.swift */,
+			);
+			path = Exercise2.1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +197,8 @@
 				C753B4A7273BB56500295EBA /* Transitions_07App.swift in Sources */,
 				C754189F2743F84B00B0683F /* Task06-1View.swift in Sources */,
 				C75418A12744465800B0683F /* CardView.swift in Sources */,
+				C75418A527445B3E00B0683F /* CardViewCourses.swift in Sources */,
+				C75418A327445A8F00B0683F /* Task06-2View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import SwiftUI
 struct Transitions_07App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Task06_2View()
         }
     }
 }
