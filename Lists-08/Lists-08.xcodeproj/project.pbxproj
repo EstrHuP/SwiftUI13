@@ -11,6 +11,7 @@
 		C75094C5274D4DE600DD03EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75094C4274D4DE600DD03EA /* ContentView.swift */; };
 		C75094C7274D4DE800DD03EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75094C6274D4DE800DD03EA /* Assets.xcassets */; };
 		C75094CA274D4DE800DD03EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75094C9274D4DE800DD03EA /* Preview Assets.xcassets */; };
+		C75808E5274E6A2700F0C462 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75808E4274E6A2700F0C462 /* ExerciseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C75094C4274D4DE600DD03EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C75094C6274D4DE800DD03EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C75094C9274D4DE800DD03EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C75808E4274E6A2700F0C462 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				C75094C2274D4DE600DD03EA /* Lists_08App.swift */,
 				C75094C4274D4DE600DD03EA /* ContentView.swift */,
+				C75808E4274E6A2700F0C462 /* ExerciseView.swift */,
 				C75094C6274D4DE800DD03EA /* Assets.xcassets */,
 				C75094C8274D4DE800DD03EA /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C75808E5274E6A2700F0C462 /* ExerciseView.swift in Sources */,
 				C75094C5274D4DE600DD03EA /* ContentView.swift in Sources */,
 				C75094C3274D4DE600DD03EA /* Lists_08App.swift in Sources */,
 			);
