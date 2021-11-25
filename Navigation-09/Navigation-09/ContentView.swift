@@ -41,17 +41,17 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(listVideogames.indices) { index in
-                
-                NavigationLink(destination: VideogameDetailView(videogame: self.listVideogames[index])) {
-                    
+                ZStack {
                     if self.listVideogames[index].feature {
                         VideogameFullImageRow(videogame: self.listVideogames[index])
                     } else {
                         VideogameImageRoundRow(videogame: self.listVideogames[index])
                     }
+                    NavigationLink(destination: VideogameDetailView(videogame: self.listVideogames[index])) {
+                        EmptyView()
+                    }
                 }
             }
-//            .navigationBarTitle("Inidie's Videogames", displayMode: .inline)
             .navigationBarTitle("Inidie's Videogames")
         }
     }
@@ -80,6 +80,7 @@ struct VideogameImageRoundRow: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 100)
             Text(videogame.name)
+                .frame(width: 200)
         }
     }
 }
