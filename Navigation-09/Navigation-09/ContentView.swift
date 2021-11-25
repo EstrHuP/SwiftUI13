@@ -30,6 +30,9 @@ struct ContentView: View {
             .font: UIFont(name: "Times New Roman", size: 18)!,
             .foregroundColor: UIColor.systemRed
         ]
+        appearance.setBackIndicatorImage(UIImage(systemName: "arrow.uturn.left"), transitionMaskImage: UIImage(systemName: "arrow.left.circle"))
+        
+        UINavigationBar.appearance().tintColor = .systemBlue
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
