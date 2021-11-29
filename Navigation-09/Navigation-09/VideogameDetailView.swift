@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct VideogameDetailView: View {
+    @Environment(\.presentationMode) var presentationMode
     var videogame: Videogame
     
     var body: some View {
         VStack {
             Image(videogame.image)
                 .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 250)
-                .clipped()
+                .aspectRatio(contentMode: .fit)
             Text(videogame.name)
                 .font(.system(.title, design: .rounded).bold())
                 .multilineTextAlignment(.center)
@@ -25,6 +24,18 @@ struct VideogameDetailView: View {
             
             Spacer()
         }
+        //        .navigationBarTitle("", displayMode: .inline)
+        .edgesIgnoringSafeArea(.top)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(
+            leading: Button(action: {
+            //Navegar a la pantalla previa
+                self.presentationMode.wrappedValue.dismiss()
+        }, label: {
+            Image(systemName: "arrow.left.circle.fill")
+                .font(.title)
+                .foregroundColor(.white)
+        }))
     }
 }
 

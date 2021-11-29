@@ -20,7 +20,7 @@ struct ContentView: View {
     ]
     
     //Custom navigation bar with SwiftUI. Although it depends on UIKit
-    init() {
+    /* init() {
         let appearance = UINavigationBarAppearance()
         appearance.largeTitleTextAttributes = [
             .font: UIFont(name: "Times New Roman", size: 32)!,
@@ -36,7 +36,7 @@ struct ContentView: View {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
-    }
+    } */
     
     var body: some View {
         NavigationView {
@@ -52,7 +52,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarTitle("Inidie's Videogames")
+            .navigationBarTitle("Indie's Videogames", displayMode: .automatic)
         }
     }
 }
@@ -80,7 +80,7 @@ struct VideogameImageRoundRow: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 100)
             Text(videogame.name)
-                .frame(width: 200)
+                .frame(width: 100)
         }
     }
 }
