@@ -24,18 +24,25 @@ struct VideogameDetailView: View {
             
             Spacer()
         }
-        //        .navigationBarTitle("", displayMode: .inline)
         .edgesIgnoringSafeArea(.top)
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(
-            leading: Button(action: {
-            //Navegar a la pantalla previa
-                self.presentationMode.wrappedValue.dismiss()
-        }, label: {
-            Image(systemName: "arrow.left.circle.fill")
-                .font(.title)
-                .foregroundColor(.white)
-        }))
+        .overlay(
+            HStack {
+                Spacer()
+                VStack {
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }, label: {
+                        Image(systemName: "chevron.down.circle")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    })
+                        .padding(.trailing, 20)
+                        .padding(.top, 20)
+                    
+                    Spacer()
+                }
+            }
+        )
     }
 }
 
