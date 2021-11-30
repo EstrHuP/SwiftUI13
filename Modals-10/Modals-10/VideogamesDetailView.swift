@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct VideogameDetailView: View {
+    
     @Environment(\.presentationMode) var presentationMode
+    @State private var showAlert = false
+    
     var videogame: Videogame
     
     var body: some View {
@@ -30,7 +33,7 @@ struct VideogameDetailView: View {
                 Spacer()
                 VStack {
                     Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
+                        self.showAlert = true
                     }, label: {
                         Image(systemName: "chevron.down.circle")
                             .font(.largeTitle)
@@ -43,6 +46,15 @@ struct VideogameDetailView: View {
                 }
             }
         )
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Warning!"),
+                message: Text("Are you sure to close this window?"),
+                primaryButton: .default(Text("Yes"), action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }),
+                secondaryButton: .cancel(Text("No")))
+        }
     }
 }
 
