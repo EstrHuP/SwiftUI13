@@ -19,15 +19,27 @@ struct ContentView: View {
         Course(name: "Aprende C# creando un juego en Unity 5: de cero a experto", image: "c#", type: "Videogames", priceLevel: 2),
     ]
     
+    //List of courses
     @State var selectedCourse: Course?
+    //Navigation
+    @State private var navigationLinkActive = false
     
     var body: some View {
+        
         NavigationView {
+
             List {
+                
                 ForEach(listCourses) { course in
+                    
+                    if navigationLinkActive {
+                        NavigationLink("", destination: DetailCourse(course: course), isActive: $navigationLinkActive)
+                    }
+                    
                     ZStack {
                         
                         CourseImageRoundView(course: course)
+                        
                             .contextMenu {
                                 
                                 //Buy Button
@@ -35,8 +47,8 @@ struct ContentView: View {
                                     self.setPurchased(item: course)
                                 }) {
                                     HStack {
-                                        Text("Comprar")
-                                        Image(systemName: "checkmark.circle")
+                                        course.purchased == true ? Text("Buy") : Text("Return")
+                                        course.purchased == true ? Image(systemName: "checkmark.circle.fill") : Image(systemName: "checkmark.circle")
                                     }
                                 }
                                 
@@ -45,8 +57,8 @@ struct ContentView: View {
                                     self.setFeatured(item: course)
                                 }) {
                                     HStack {
-                                        Text("Destacar")
-                                        Image(systemName: "star")
+                                        course.featured == true ? Text("Remove to favorite") : Text("Mark to favorite")
+                                        course.featured == true ? Image(systemName: "star.fill") : Image(systemName: "star")
                                     }
                                 }
                                 
@@ -55,18 +67,35 @@ struct ContentView: View {
                                     self.deleteItem(item: course)
                                 }) {
                                     HStack {
-                                        Text("Borrar")
+                                        Text("Remove")
                                         Image(systemName: "trash")
                                     }
                                 }
                             }
-                        
+
                             .onTapGesture {
                                 self.selectedCourse = course
                             }
-                        NavigationLink(destination: DetailCourse(course: course)) {
-                            EmptyView()
-                        }
+
+                            .actionSheet(item: self.$selectedCourse) { course in
+
+                                ActionSheet(
+                                    title: Text("Choose the option"),
+                                    message: nil,
+                                    buttons: [
+                                        .default(
+                                            course.purchased == true ? Text("Return") : Text("Buy"), action: {
+                                                self.setPurchased(item: course)
+                                            }),
+                                        .destructive(Text("Remove course"), action: {
+                                            self.deleteItem(item: course)
+                                        }),
+                                        .default(Text("Go to Detail View"), action: {
+                                            navigationLinkActive = true
+                                        }),
+                                        .cancel()
+                                    ])
+                            }
                     }
                 }
                 .onDelete { (indexSet) in
@@ -74,6 +103,7 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Cursos online", displayMode: .automatic)
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
     
