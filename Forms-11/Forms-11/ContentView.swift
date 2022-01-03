@@ -34,7 +34,7 @@ struct ContentView: View {
 
             List {
                 
-                ForEach(listCourses) { course in
+                ForEach(listCourses.filter(shouldShowCourse)) { course in
                     
                     if navigationLinkActive {
                         NavigationLink("", destination: DetailCourse(course: course), isActive: $navigationLinkActive)
@@ -120,7 +120,6 @@ struct ContentView: View {
             }
             .navigationBarTitle("Cursos online", displayMode: .automatic)
             .navigationViewStyle(StackNavigationViewStyle())
-           
         }
     }
     
@@ -140,6 +139,12 @@ struct ContentView: View {
         if let index = self.listCourses.firstIndex(where: {$0.id == course.id}) {
             self.listCourses.remove(at: index)
         }
+    }
+    
+    private func shouldShowCourse(course: Course) -> Bool {
+        let checkPurchased = (self.settings.showPurchased && course.purchased) || !self.settings.showPurchased
+        let checkPrice = (course.priceLevel <= self.settings.maxPrice)
+        return checkPurchased && checkPrice
     }
 }
 
