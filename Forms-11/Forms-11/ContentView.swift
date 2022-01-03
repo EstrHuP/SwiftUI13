@@ -34,7 +34,10 @@ struct ContentView: View {
 
             List {
                 
-                ForEach(listCourses.filter(shouldShowCourse)) { course in
+                ForEach(listCourses
+                            .filter(shouldShowCourse)
+                            .sorted(by: self.settings.order.predicateSort())
+                ) { course in
                     
                     if navigationLinkActive {
                         NavigationLink("", destination: DetailCourse(course: course), isActive: $navigationLinkActive)
