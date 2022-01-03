@@ -23,6 +23,8 @@ struct ContentView: View {
     @State var selectedCourse: Course?
     //Navigation
     @State private var navigationLinkActive = false
+    //Form
+    @State private var showSettingsView: Bool = false
     
     var body: some View {
         
@@ -102,8 +104,21 @@ struct ContentView: View {
                     self.listCourses.remove(atOffsets: indexSet)
                 }
             }
+            .navigationBarItems(trailing:
+                Button(action: {
+                    showSettingsView.toggle()
+                }, label: {
+                    Image(systemName: "gear")
+                        .font(.title)
+                        .foregroundColor(.gray)
+                })
+            )
+            .sheet(isPresented: $showSettingsView) {
+                SettingsView()
+            }
             .navigationBarTitle("Cursos online", displayMode: .automatic)
             .navigationViewStyle(StackNavigationViewStyle())
+           
         }
     }
     
