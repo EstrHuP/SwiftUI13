@@ -28,6 +28,8 @@ struct SettingsView: View {
         }
     }
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationView {
             Form {
@@ -58,6 +60,17 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("Configuración")
+            .navigationBarItems(leading:
+                Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "xmark")
+                    .font(.title3)
+                    .foregroundColor(.gray)
+            })
+            .navigationBarItems(trailing: Button("Guardar", action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }))
         }
     }
 }
