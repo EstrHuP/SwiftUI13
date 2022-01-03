@@ -17,6 +17,16 @@ struct SettingsView: View {
     
     @State private var selectedOrder = 0
     @State private var showPurchased = false
+    @State private var maxPrice = 5 {
+        didSet {
+            if maxPrice > 5 {
+                self.maxPrice = 5
+            }
+            if maxPrice < 1 {
+                self.maxPrice = 1
+            }
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -38,6 +48,13 @@ struct SettingsView: View {
                         Text("Mostrar cursos comprados")
                     }
                     
+                    Stepper(onIncrement: {
+                        self.maxPrice += 1
+                    }, onDecrement: {
+                        self.maxPrice -= 1
+                    }) {
+                        Text("Mostrar \(String(repeating: "€", count: maxPrice)) o menos")
+                    }
                 }
             }
             .navigationTitle("Configuración")
