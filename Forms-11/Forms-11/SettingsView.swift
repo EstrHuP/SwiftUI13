@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    var settings: SettingsFactory
+    
     @State private var selectedOrder = SortingOrderType.alphabetical
     @State private var showPurchased = false
     @State private var maxPrice = 5 {
@@ -63,14 +65,22 @@ struct SettingsView: View {
                     .foregroundColor(.gray)
             })
             .navigationBarItems(trailing: Button("Guardar", action: {
+                self.settings.order = self.selectedOrder
+                self.settings.showPurchased = self.showPurchased
+                self.settings.maxPrice = self.maxPrice
                 self.presentationMode.wrappedValue.dismiss()
             }))
+        }
+        .onAppear {
+            self.selectedOrder = self.settings.order
+            self.showPurchased = self.settings.showPurchased
+            self.maxPrice = self.settings.maxPrice
         }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(settings: SettingsFactory())
     }
 }

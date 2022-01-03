@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    var settings: SettingsFactory
+    
     @State var listCourses = [
         Course(name: "Aprende a programar en Android con Kotlin", image: "android-kotlin", type: "Mobile", priceLevel: 3),
         Course(name: "Machine Learning de A a la Z: R y Python para Data Science", image: "machine-learning", type: "Data", priceLevel: 4, featured: true),
@@ -114,7 +116,7 @@ struct ContentView: View {
                 })
             )
             .sheet(isPresented: $showSettingsView) {
-                SettingsView()
+                SettingsView(settings: self.settings)
             }
             .navigationBarTitle("Cursos online", displayMode: .automatic)
             .navigationViewStyle(StackNavigationViewStyle())
@@ -145,7 +147,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(settings: SettingsFactory())
     }
 }
 
