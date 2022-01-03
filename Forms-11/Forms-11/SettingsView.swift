@@ -9,13 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    private var sortingsOrder = [
-        "Alfabéticamente",
-        "Favoritos al inicio",
-        "Comprados al inicio"
-    ]
-    
-    @State private var selectedOrder = 0
+    @State private var selectedOrder = SortingOrderType.alphabetical
     @State private var showPurchased = false
     @State private var maxPrice = 5 {
         didSet {
@@ -37,8 +31,8 @@ struct SettingsView: View {
                     
                     /// PickerView
                     Picker(selection: $selectedOrder, label: Text("Orden de los cursos:")) {
-                        ForEach(0..<sortingsOrder.count, id: \.self) {
-                            Text(self.sortingsOrder[$0])
+                        ForEach(SortingOrderType.allCases, id: \.self) { orderType in
+                            Text(orderType.description)
                         }
                     }
                     
