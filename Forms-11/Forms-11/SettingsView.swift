@@ -13,6 +13,7 @@ struct SettingsView: View {
     
     @State private var selectedOrder = SortingOrderType.alphabetical
     @State private var showPurchased = false
+    @State private var showFavorites = false
     @State private var maxPrice = 5 {
         didSet {
             if maxPrice > 5 {
@@ -46,6 +47,10 @@ struct SettingsView: View {
                         Text("Mostrar cursos comprados")
                     }
                     
+                    Toggle(isOn: $showFavorites) {
+                        Text("Mostrar cursos favoritos")
+                    }
+                    
                     Stepper(onIncrement: {
                         self.maxPrice += 1
                     }, onDecrement: {
@@ -67,6 +72,7 @@ struct SettingsView: View {
             .navigationBarItems(trailing: Button("Guardar", action: {
                 self.settings.order = self.selectedOrder
                 self.settings.showPurchased = self.showPurchased
+                self.settings.showFavorites = self.showFavorites
                 self.settings.maxPrice = self.maxPrice
                 self.presentationMode.wrappedValue.dismiss()
             }))
@@ -74,6 +80,7 @@ struct SettingsView: View {
         .onAppear {
             self.selectedOrder = self.settings.order
             self.showPurchased = self.settings.showPurchased
+            self.showFavorites = self.settings.showFavorites
             self.maxPrice = self.settings.maxPrice
         }
     }

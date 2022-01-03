@@ -146,8 +146,9 @@ struct ContentView: View {
     
     private func shouldShowCourse(course: Course) -> Bool {
         let checkPurchased = (self.settings.showPurchased && course.purchased) || !self.settings.showPurchased
+        let checkFeatured = (self.settings.showFavorites && course.featured) || !self.settings.showFavorites
         let checkPrice = (course.priceLevel <= self.settings.maxPrice)
-        return checkPurchased && checkPrice
+        return checkPurchased && checkFeatured && checkPrice
     }
 }
 

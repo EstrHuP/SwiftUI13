@@ -18,6 +18,7 @@ final class SettingsFactory: ObservableObject {
         defaults.register(defaults: [
             "app.view.settings.order": 0,
             "app.view.settings.showPurchased": false,
+            "app.view.settings.showFavorites": false,
             "app.view.settings.maxPrice": 5
         ])
     }
@@ -36,6 +37,14 @@ final class SettingsFactory: ObservableObject {
         }
         set {
             defaults.set(newValue, forKey: "app.view.settings.showPurchased")
+        }
+    }
+    var showFavorites: Bool {
+        get {
+            defaults.bool(forKey: "app.view.settings.showFavorites")
+        }
+        set {
+            defaults.set(newValue, forKey: "app.view.settings.showFavorites")
         }
     }
     var maxPrice: Int {
