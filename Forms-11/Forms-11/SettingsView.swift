@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    var settings: SettingsFactory
+    @EnvironmentObject var settings: SettingsFactory
     
     @State private var selectedOrder = SortingOrderType.alphabetical
     @State private var showPurchased = false
@@ -81,6 +81,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(settings: SettingsFactory())
+        SettingsView().environmentObject(SettingsFactory())
     }
 }

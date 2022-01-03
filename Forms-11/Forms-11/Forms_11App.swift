@@ -11,7 +11,7 @@ import SwiftUI
 struct Forms_11App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(settings: SettingsFactory())
+            ContentView().environmentObject(SettingsFactory())
         }
     }
 }

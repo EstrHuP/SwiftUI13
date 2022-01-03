@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import Combine
 
-final class SettingsFactory {
+final class SettingsFactory: ObservableObject {
     
-    var defaults: UserDefaults
+    @Published var defaults: UserDefaults
     
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
