@@ -16,6 +16,7 @@ struct SettingsView: View {
     ]
     
     @State private var selectedOrder = 0
+    @State private var showPurchased = false
     
     var body: some View {
         NavigationView {
@@ -31,7 +32,12 @@ struct SettingsView: View {
                     
                 }
                 Section(header: Text("Filtrar los cursos")) {
-                    Text("Filtros")
+                    
+                    /// Toggle (Switch)
+                    Toggle(isOn: $showPurchased) {
+                        Text("Mostrar cursos comprados")
+                    }
+                    
                 }
             }
             .navigationTitle("Configuración")
