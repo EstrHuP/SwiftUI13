@@ -9,32 +9,27 @@ import SwiftUI
 
 struct DragView: View {
     
-    //Gestos prolongados
-    @GestureState private var isHasBeenLongPressed = false
-    
+    @GestureState private var dragState = DragState.none
     //Gestos arrastre
     @State private var position = CGSize.zero
-    @GestureState private var offset = CGSize.zero
     
     var body: some View {
         Image(systemName: "heart")
             .font(.system(size: 100))
             .foregroundColor(.purple)
-            .offset(x: position.width + offset.width,
-                    y: position.height + offset.height)
+            .opacity(dragState.isPressing ? 0.5 : 1.0)
+            .offset(x: position.width + dragState.translation.width,
+                    y: position.height + dragState.translation.height)
             .animation(.easeIn)
             .gesture(
                 LongPressGesture(minimumDuration: 0.5)
-                    .updating($isHasBeenLongPressed) { (value, state, transaction) in
-                        state = value
-                    }
                     .sequenced(before: DragGesture())
-                    .updating($offset) { (value, state, transaction) in
+                    .updating($dragState) { (value, state, transaction) in
                         switch value {
                         case .first(true):
-                            print("El gesto es un tap")
+                            state = .pressing
                         case .second(true, let drag):
-                            state = drag?.translation ?? .zero
+                            state = .dragging(translation: drag?.translation ?? .zero)
                         default:
                             break
                         }
@@ -53,5 +48,29 @@ struct DragView: View {
 struct DragView_Previews: PreviewProvider {
     static var previews: some View {
         DragView()
+    }
+}
+
+enum DragState {
+    case none
+    case pressing
+    case dragging(translation: CGSize)
+    
+    var translation: CGSize {
+        switch self {
+        case .none, .pressing:
+            return .zero
+        case .dragging(translation: let translation):
+            return translation
+        }
+    }
+    
+    var isPressing: Bool {
+        switch self {
+        case .pressing, .dragging:
+            return true
+        case .none:
+            return false
+        }
     }
 }
