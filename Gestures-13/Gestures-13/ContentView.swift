@@ -9,24 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var position = CGSize.zero
-    @GestureState private var offset = CGSize.zero
+    @State private var isHasBeenPressed = false
+    @GestureState private var isHasBeenLongPressed = false
     
     var body: some View {
         Image(systemName: "heart")
             .font(.system(size: 100))
             .foregroundColor(.purple)
-            .offset(x: position.width + offset.width,
-                    y: position.height + offset.height)
+            .opacity(isHasBeenLongPressed ? 0.5 : 1.0)
+            .scaleEffect(isHasBeenPressed ? 2.0 : 1.0)
             .animation(.easeIn)
             .gesture(
-                DragGesture()
-                    .updating($offset) { (value, state, transaction) in
-                        state = value.translation
+                LongPressGesture(minimumDuration: 0.5)
+                    .updating($isHasBeenLongPressed) { (value, state, transaction) in
+                        state = value
                     }
-                    .onEnded { (value) in
-                        self.position.height += value.translation.height
-                        self.position.width += value.translation.width
+                    .onEnded { _ in
+                        self.isHasBeenPressed.toggle()
                     }
             )
     }
