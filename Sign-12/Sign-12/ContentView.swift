@@ -9,9 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var username = ""
-    @State private var password = ""
-    @State private var confirmPassword = ""
+    @ObservedObject private var registrationVM = RegistrationViewModel()
     
     var body: some View {
         VStack {
@@ -19,21 +17,44 @@ struct ContentView: View {
                 .font(.system(.largeTitle, design: .rounded).bold())
                 .padding(.bottom, 50)
             
-            SignFormView(fieldName: "Nombre", fieldValue: $username)
+            SignFormView(fieldName: "Nombre", fieldValue: $registrationVM.userName)
             
-            ValidationFormView(formText: "Mínimo 6 carácteres")
+            ValidationFormView(
+                iconName: registrationVM.isUserNameLengthValid ? "checkmark.circle" : "xmark.circle",
+                iconColor: registrationVM.isUserNameLengthValid ? Color.green : Color.red,
+                formText: "Mínimo 6 carácteres",
+                isConditionField: registrationVM.isUserNameLengthValid)
                 .padding()
             
-            SignFormView(fieldName: "Contraseña", isProtected: true, fieldValue: $password)
+            SignFormView(
+                fieldName: "Contraseña",
+                isProtected: true,
+                fieldValue: $registrationVM.password)
             
             VStack {
-                ValidationFormView(formText: "Mínimo 8 carácteres", isConditionField: false)
-                ValidationFormView(formText: "Se necesita mayúsculas y números", isConditionField: false)
+                ValidationFormView(
+                    iconName: registrationVM.isPasswordLenghtValid ? "checkmark.circle" : "xmark.circle",
+                    iconColor: registrationVM.isPasswordLenghtValid ? Color.green : Color.red,
+                    formText: "Mínimo 8 carácteres",
+                    isConditionField: registrationVM.isPasswordLenghtValid)
+                
+                ValidationFormView(
+                    iconName: registrationVM.isPasswordCapitalLetter ? "checkmark.circle" : "xmark.circle",
+                    iconColor: registrationVM.isPasswordCapitalLetter ? Color.green : Color.red,
+                    formText: "Se necesita mayúsculas",
+                    isConditionField: registrationVM.isPasswordCapitalLetter)
             }.padding()
             
-            SignFormView(fieldName: "Confirmar contraseña", isProtected: true, fieldValue: $confirmPassword)
+            SignFormView(
+                fieldName: "Confirmar contraseña",
+                isProtected: true,
+                fieldValue: $registrationVM.confirmPassword)
             
-            ValidationFormView(formText: "Las dos contraseñas deben coincidir", isConditionField: false)
+            ValidationFormView(
+                iconName: registrationVM.isPasswordsMatch ? "checkmark.circle" : "xmark.circle",
+                iconColor: registrationVM.isPasswordsMatch ? Color.green : Color.red,
+                formText: "Las dos contraseñas deben coincidir",
+                isConditionField: registrationVM.isPasswordsMatch)
                 .padding()
                 .padding(.bottom, 60)
             

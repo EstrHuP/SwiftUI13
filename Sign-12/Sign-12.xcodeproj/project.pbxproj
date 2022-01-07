@@ -11,6 +11,7 @@
 		C73B4D7827844DAA003D1278 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B4D7727844DAA003D1278 /* ContentView.swift */; };
 		C73B4D7A27844DAB003D1278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73B4D7927844DAB003D1278 /* Assets.xcassets */; };
 		C73B4D7D27844DAB003D1278 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73B4D7C27844DAB003D1278 /* Preview Assets.xcassets */; };
+		C73B4D8427885856003D1278 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B4D8327885856003D1278 /* RegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C73B4D7727844DAA003D1278 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C73B4D7927844DAB003D1278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C73B4D7C27844DAB003D1278 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C73B4D8327885856003D1278 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				C73B4D7527844DAA003D1278 /* Sign_12App.swift */,
 				C73B4D7727844DAA003D1278 /* ContentView.swift */,
+				C73B4D8327885856003D1278 /* RegistrationViewModel.swift */,
 				C73B4D7927844DAB003D1278 /* Assets.xcassets */,
 				C73B4D7B27844DAB003D1278 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C73B4D7827844DAA003D1278 /* ContentView.swift in Sources */,
+				C73B4D8427885856003D1278 /* RegistrationViewModel.swift in Sources */,
 				C73B4D7627844DAA003D1278 /* Sign_12App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
