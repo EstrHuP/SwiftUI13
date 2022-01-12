@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    private let threshold: CGFloat = 100
+    
     @GestureState private var dragState = DragState.none
     
     var deckCards: [CardView] = {
@@ -28,6 +30,19 @@ struct ContentView: View {
                 ForEach(deckCards) { card in
                     card
                         .zIndex(self.isTopCard(card: card) ? 1 : 0)
+                        .overlay(
+                            ZStack {
+                                Image(systemName: "xmark.circle.fill")
+                                    .font(.system(size: 80))
+                                    .foregroundColor(Color.red)
+                                    .opacity(self.dragState.translation.width < -self.threshold && self.isTopCard(card: card) ? 1 : 0)
+                                
+                                Image(systemName: "heart.circle.fill")
+                                    .font(.system(size: 80))
+                                    .foregroundColor(Color.green)
+                                    .opacity(self.dragState.translation.width > self.threshold && self.isTopCard(card: card) ? 1 : 0)
+                            }
+                        )
                         .offset(x: self.isTopCard(card: card) ? self.dragState.translation.width : 0,
                                 y: self.isTopCard(card: card) ? self.dragState.translation.height : 0)
                         //hacer más pequeño cuando descartamos
