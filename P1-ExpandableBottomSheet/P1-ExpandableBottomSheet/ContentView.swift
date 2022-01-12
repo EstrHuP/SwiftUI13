@@ -26,6 +26,10 @@ struct ContentView: View {
                 }
                 .navigationTitle("Online courses")
             }
+            
+            .offset(y: self.showCourseDetail ? -150 : 0)
+            .animation(.easeIn(duration: 0.3))
+            
             if showCourseDetail {
                 
                 BlanketView(color: .gray)
@@ -35,7 +39,7 @@ struct ContentView: View {
                     }
                 
                 self.selectedCourse.map {
-                    CourseDetailView(course: $0)
+                    CourseDetailView(isShown: $showCourseDetail, course: $0)
                         .transition(.move(edge: .bottom))
                 }
             }

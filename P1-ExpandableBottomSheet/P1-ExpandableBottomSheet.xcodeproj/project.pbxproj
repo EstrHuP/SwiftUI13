@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C756EE24278D81C30028C152 /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C756EE23278D81C30028C152 /* DragState.swift */; };
 		C75742AA278C8D7D00203935 /* P1_ExpandableBottomSheetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75742A9278C8D7D00203935 /* P1_ExpandableBottomSheetApp.swift */; };
 		C75742AC278C8D7D00203935 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75742AB278C8D7D00203935 /* ContentView.swift */; };
 		C75742AE278C8D8200203935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75742AD278C8D8200203935 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C756EE23278D81C30028C152 /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 		C75742A6278C8D7D00203935 /* P1-ExpandableBottomSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P1-ExpandableBottomSheet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75742A9278C8D7D00203935 /* P1_ExpandableBottomSheetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1_ExpandableBottomSheetApp.swift; sourceTree = "<group>"; };
 		C75742AB278C8D7D00203935 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				C75742B7278C8DF000203935 /* Course.swift */,
 				C75742AB278C8D7D00203935 /* ContentView.swift */,
 				C75742B9278C934A00203935 /* CourseDetailView.swift */,
+				C756EE23278D81C30028C152 /* DragState.swift */,
 				C75742A9278C8D7D00203935 /* P1_ExpandableBottomSheetApp.swift */,
 				C75742AD278C8D8200203935 /* Assets.xcassets */,
 				C75742AF278C8D8200203935 /* Preview Content */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C75742BA278C934A00203935 /* CourseDetailView.swift in Sources */,
+				C756EE24278D81C30028C152 /* DragState.swift in Sources */,
 				C75742B8278C8DF000203935 /* Course.swift in Sources */,
 				C75742AC278C8D7D00203935 /* ContentView.swift in Sources */,
 				C75742AA278C8D7D00203935 /* P1_ExpandableBottomSheetApp.swift in Sources */,
