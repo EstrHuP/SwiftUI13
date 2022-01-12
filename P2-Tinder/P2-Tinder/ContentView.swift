@@ -13,7 +13,9 @@ struct ContentView: View {
     
     @GestureState private var dragState = DragState.none
     
-    var deckCards: [CardView] = {
+    @State private var lastCardIdx = 1
+    
+    @State var deckCards: [CardView] = {
         var cards = [CardView]()
         
         for idx in 0..<2 {
@@ -21,6 +23,8 @@ struct ContentView: View {
         }
         return cards
     }()
+    
+    @State private var removalTransition = AnyTransition.leadingBottomAtRemoval
     
     var body: some View {
         VStack {
@@ -50,6 +54,8 @@ struct ContentView: View {
                         //rotar cuando descartamos
                         .rotationEffect(Angle(degrees: Double(self.isTopCard(card: card) ? self.dragState.translation.width/10 : 0)))
                         .animation(.interpolatingSpring(stiffness: 18, damping: 100))
+                        //animacion de dejar caer la primera carta una vez seleccionada
+                        .transition(self.removalTransition)
                         //añadir el gesto para que funcione la animacion
                         .gesture(LongPressGesture(minimumDuration: 0.01)
                                     .sequenced(before: DragGesture())
@@ -63,6 +69,22 @@ struct ContentView: View {
                                 break
                             }
                         })
+                        .onChanged { (value) in
+                            guard case .second(true, let drag?) = value else {
+                                return
+                            }
+                            //si es > hemos arrastrado hacia el lado derecho
+                            self.removalTransition = drag.translation.width > 0 ? .trailingBottomAtRemoval : .leadingBottomAtRemoval
+                        }
+                        .onEnded { (value) in
+                            guard case .second(true, let drag?) = value else {
+                                return
+                            }
+                            if drag.translation.width > self.threshold || drag.translation.width < -self.threshold {
+                                //TODO: - Marcar el curso como X o corazon
+                                self.updateDeckCards()
+                            }
+                        }
                     )
                 }
             }
@@ -78,6 +100,16 @@ struct ContentView: View {
         }
         //si llegamos hasta aquí, está en el mazo
         return idx == 0
+    }
+    
+    private func updateDeckCards() {
+        deckCards.removeFirst() //eliminar la primera carta
+        self.lastCardIdx += 1 //incrementar la unidad de la siguiente carta
+        
+        let newCourse = coursesArray[self.lastCardIdx % coursesArray.count] //extraer nueva carta
+        let newCardView = CardView(course: newCourse) //volver a cargar la baraja de cartas
+        
+        deckCards.append(newCardView) //añadir la nueva baraja de cartas y swiftui lo actualizara gracias al State
     }
 }
 
@@ -124,7 +156,7 @@ struct BottomBarView: View {
             Spacer()
             
             Button(action: {
-                
+                //TODO: - logica de comprar el curso. Debera guardarse en un listado
             }) {
                 Text("Comprar el curso")
                     .bold()
