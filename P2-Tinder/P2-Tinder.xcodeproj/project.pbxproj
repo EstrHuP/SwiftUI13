@@ -13,6 +13,7 @@
 		C751F076278F2E0800470008 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C751F075278F2E0800470008 /* Preview Assets.xcassets */; };
 		C751F07D278F371000470008 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751F07C278F371000470008 /* Course.swift */; };
 		C751F07F278F3A8100470008 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751F07E278F3A8100470008 /* CardView.swift */; };
+		C751F081278F603E00470008 /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751F080278F603E00470008 /* DragState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C751F075278F2E0800470008 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C751F07C278F371000470008 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		C751F07E278F3A8100470008 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C751F080278F603E00470008 /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				C751F074278F2E0800470008 /* Preview Content */,
 				C751F07C278F371000470008 /* Course.swift */,
 				C751F07E278F3A8100470008 /* CardView.swift */,
+				C751F080278F603E00470008 /* DragState.swift */,
 			);
 			path = "P2-Tinder";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C751F07D278F371000470008 /* Course.swift in Sources */,
+				C751F081278F603E00470008 /* DragState.swift in Sources */,
 				C751F071278F2E0600470008 /* ContentView.swift in Sources */,
 				C751F07F278F3A8100470008 /* CardView.swift in Sources */,
 				C751F06F278F2E0600470008 /* P2_TinderApp.swift in Sources */,

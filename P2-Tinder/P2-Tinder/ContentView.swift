@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @GestureState private var dragState = DragState.none
+    
     var deckCards: [CardView] = {
         var cards = [CardView]()
         
@@ -24,10 +26,34 @@ struct ContentView: View {
             Spacer(minLength: 10)
             ZStack {
                 ForEach(deckCards) { card in
-                    card.zIndex(self.isTopView(card: card) ? 1 : 0)
+                    card
+                        .zIndex(self.isTopView(card: card) ? 1 : 0)
+                        .offset(x: self.dragState.translation.width,
+                                y: self.dragState.translation.height)
+                        //hacer más pequeño cuando descartamos
+                        .scaleEffect(self.dragState.isDragging ? 0.9 : 1.0)
+                        //rotar cuando descartamos
+                        .rotationEffect(Angle(degrees: Double(self.dragState.translation.width/10)))
+                        .animation(.interpolatingSpring(stiffness: 18, damping: 100))
+                        //añadir el gesto para que funcione la animacion
+                        .gesture(LongPressGesture(minimumDuration: 0.01)
+                                    .sequenced(before: DragGesture())
+                                    .updating(self.$dragState, body: { (value, state, transaction) in
+                            switch value {
+                            case .first(true):
+                                state = .pressing
+                            case .second(true, let drag):
+                                state = .dragging(translation: drag?.translation ?? .zero)
+                            default:
+                                break
+                            }
+                        })
+                    )
                 }
             }
             BottomBarView()
+                .opacity(self.dragState.isDragging ? 0.1 : 1.0)
+                .animation(.linear)
         }
     }
     
