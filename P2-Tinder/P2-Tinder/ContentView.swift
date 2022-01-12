@@ -8,12 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var deckCards: [CardView] = {
+        var cards = [CardView]()
+        
+        for idx in 0..<2 {
+            cards.append(CardView(course: coursesArray[idx]))
+        }
+        return cards
+    }()
+    
     var body: some View {
         VStack {
             TopBarView()
-            CardView(course: coursesArray[0])
+            Spacer(minLength: 10)
+            ZStack {
+                ForEach(deckCards) { card in
+                    card.zIndex(self.isTopView(card: card) ? 1 : 0)
+                }
+            }
             BottomBarView()
         }
+    }
+    
+    private func isTopView(card: CardView) -> Bool {
+        guard let idx = deckCards.firstIndex(where: {$0.id == card.id}) else {
+            return false
+        }
+        //si llegamos hasta aquí, está en el mazo
+        return idx == 0
     }
 }
 
