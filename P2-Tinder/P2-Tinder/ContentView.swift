@@ -27,13 +27,13 @@ struct ContentView: View {
             ZStack {
                 ForEach(deckCards) { card in
                     card
-                        .zIndex(self.isTopView(card: card) ? 1 : 0)
-                        .offset(x: self.dragState.translation.width,
-                                y: self.dragState.translation.height)
+                        .zIndex(self.isTopCard(card: card) ? 1 : 0)
+                        .offset(x: self.isTopCard(card: card) ? self.dragState.translation.width : 0,
+                                y: self.isTopCard(card: card) ? self.dragState.translation.height : 0)
                         //hacer más pequeño cuando descartamos
-                        .scaleEffect(self.dragState.isDragging ? 0.9 : 1.0)
+                        .scaleEffect(self.dragState.isDragging && self.isTopCard(card: card) ? 0.9 : 1.0)
                         //rotar cuando descartamos
-                        .rotationEffect(Angle(degrees: Double(self.dragState.translation.width/10)))
+                        .rotationEffect(Angle(degrees: Double(self.isTopCard(card: card) ? self.dragState.translation.width/10 : 0)))
                         .animation(.interpolatingSpring(stiffness: 18, damping: 100))
                         //añadir el gesto para que funcione la animacion
                         .gesture(LongPressGesture(minimumDuration: 0.01)
@@ -57,7 +57,7 @@ struct ContentView: View {
         }
     }
     
-    private func isTopView(card: CardView) -> Bool {
+    private func isTopCard(card: CardView) -> Bool {
         guard let idx = deckCards.firstIndex(where: {$0.id == card.id}) else {
             return false
         }
